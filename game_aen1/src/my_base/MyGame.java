@@ -1,5 +1,5 @@
 package my_base;
-
+// here Nadav put hus first comment 30.3.2024.
 import java.awt.Color;
 
 import base.Game;
