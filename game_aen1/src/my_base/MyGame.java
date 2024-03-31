@@ -1,5 +1,5 @@
 package my_base;
-// here Nadav put hus first comment 30.3.2024.
+// here Nadav put hus first comment 30.3.2024. and the second in 31.3.24
 import java.awt.Color;
 
 import base.Game;
