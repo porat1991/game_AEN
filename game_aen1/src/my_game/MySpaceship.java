@@ -47,6 +47,7 @@ public class MySpaceship {
 //        image.setShapeListener(this);
 //        image.setzOrder(3);
         canvas.addShape(image);
+        
     }
 
 
