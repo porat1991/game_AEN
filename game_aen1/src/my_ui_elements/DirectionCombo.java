@@ -24,10 +24,10 @@ public class DirectionCombo extends GameComboBox{
         super.action();
         switch (getOption()) {
             case "Right":
-                myContent.pokimon().setDirectionPolicy(Pokimon.Direction.RIGHT);
+//                myContent.pokimon().setDirectionPolicy(Pokimon.Direction.RIGHT);
                 break;
             case "Left":
-                myContent.pokimon().setDirectionPolicy(Pokimon.Direction.LEFT);
+//                myContent.pokimon().setDirectionPolicy(Pokimon.Direction.LEFT);
                 break;
             default:
           }

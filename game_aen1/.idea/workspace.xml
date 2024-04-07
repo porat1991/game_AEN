@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="813f9005-68c7-4746-8ac3-92aa6ca98f11" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/my_game/MySpaceship.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_base/MyContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_base/MyGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_base/MyKeyboardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyKeyboardListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_base/MyPeriodicLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyPeriodicLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui_elements/ChangeButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui_elements/ChangeButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui_elements/DirectionCombo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui_elements/DirectionCombo.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui_elements/EditPolygonButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui_elements/EditPolygonButton.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_ui_elements/RotatePolygonButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui_elements/RotatePolygonButton.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
+  <component name="ProjectId" id="2emuz4wQbJmptNfwe3pxHBrh8Eq" />
+  <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.MyGame.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RunManager">
+    <configuration name="MyGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="my_base.MyGame" />
+      <module name="game_aen1" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="my_base.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.MyGame" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="813f9005-68c7-4746-8ac3-92aa6ca98f11" name="Changes" comment="" />
+      <created>1712522335328</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712522335328</updated>
+    </task>
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

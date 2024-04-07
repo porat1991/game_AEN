@@ -26,14 +26,9 @@ public class MyGame extends Game {
 		GameCanvas canvas = gameUI.canvas();
 		canvas.setMouseHandler(Game.MouseHandler());
 		canvas.setBackground(Color.WHITE);
-		canvas.setBackgroundImage("resources/background1.jpg");
+		canvas.setBackgroundImage("resources/spacebackground.jpg");
+		content.addSpaceship();
 
-		Pokimon pokimon = content.pokimon();
-		pokimon.addToCanvas();
-		canvas.addShape(content.polygon().getVisualPolygon());
-		Circle c = new Circle("circle", 300, 300, 50);
-		c.setDraggable(false);
-		canvas.addShape(c);
 	}
 	
 	@Override

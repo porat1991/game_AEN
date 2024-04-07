@@ -21,16 +21,16 @@ public class MyPeriodicLoop extends PeriodicLoop {
 		super.execute();
 		
 		// You can comment this line if you don't want the pokimon to move.
-		redrawPokimon();
+//		redrawPokimon();
 		
 		//TODO
 		//Redraw your character periodically by calling the correct method
 		
 	}
 	
-	private void redrawPokimon() {
-		content.pokimon().move();
-	}
+//	private void redrawPokimon() {
+//		content.pokimon().move();
+//	}
 
 	private void redrawCharacter() {
 		
