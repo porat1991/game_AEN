@@ -23,7 +23,8 @@ public class PeriodicScheduler {
 	public void start() {
 		  
 	    final Runnable beeper = new Runnable() {
-	    	public void run() { periodicLoop.execute(); }
+	    	public void run() {
+				periodicLoop.execute(); }
 	    };
 	    
 	    beeperHandle = scheduler.scheduleAtFixedRate(beeper, 0, periodicInterval, MILLISECONDS);

@@ -3,6 +3,7 @@ package my_base;
 
 
 
+import my_game.EnemySpaceship;
 import my_game.MySpaceship;
 import base.GameContent;
 //import javafx.scene.effect.Light.Point;
@@ -15,10 +16,13 @@ public class MyContent extends GameContent{
 	//TODO
 	//Declare your own character
 	private MySpaceship mySpaceship;
+	private EnemySpaceship enemySpaceship1;
 
 	@Override
 	public void initContent() {
 		this.mySpaceship = new MySpaceship();
+		this.enemySpaceship1 = new EnemySpaceship();
+
 //		pokimon = new Pokimon();
 //		pokimon.setLocation(new ScreenPoint(100,100));
 //		ScreenPoint[] points = {
@@ -41,9 +45,18 @@ public class MyContent extends GameContent{
 //	public MyPolygon polygon() {
 //		return myPolygon;
 //	}
+	public MySpaceship MySpaceship() {
+		return mySpaceship;
+	}
+	public EnemySpaceship enemySpaceship() {
+		return enemySpaceship1;
+	}
+
 //
 	public void addSpaceship() {
 		mySpaceship.addToCanvas();
+		enemySpaceship1.addToCanvas();
+
 		//TODO
 		//Create an instance of your character and set its properties with
 		//initial values
@@ -53,7 +66,9 @@ public class MyContent extends GameContent{
 		//Add your character visual representation to the canvas using its addToCanvas() method.
 
 	}
-	
+
+
+
 	//TODO
 	//create a method with the name myCharacter which returns
 	//your character for others to use.
