@@ -4,36 +4,23 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="813f9005-68c7-4746-8ac3-92aa6ca98f11" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/my_game/MySpaceship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_base/MyContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_base/MyGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_base/MyKeyboardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyKeyboardListener.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_base/MyPeriodicLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyPeriodicLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_ui_elements/ChangeButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui_elements/ChangeButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_ui_elements/DirectionCombo.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui_elements/DirectionCombo.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_ui_elements/EditPolygonButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui_elements/EditPolygonButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_ui_elements/RotatePolygonButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui_elements/RotatePolygonButton.java" afterDir="false" />
+    <list default="true" id="93f42932-b60b-4767-9bd6-6ae8f2646c19" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
+  "associatedIndex": 8
 }]]></component>
-  <component name="ProjectId" id="2emuz4wQbJmptNfwe3pxHBrh8Eq" />
+  <component name="ProjectId" id="2epani0U9s3GQJUpav9RHSbqKzJ" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -41,7 +28,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.MyGame.executor": "Run",
+    "Application.MyGame.executor": "Debug",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -71,11 +58,11 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="813f9005-68c7-4746-8ac3-92aa6ca98f11" name="Changes" comment="" />
-      <created>1712522335328</created>
+      <changelist id="93f42932-b60b-4767-9bd6-6ae8f2646c19" name="Changes" comment="" />
+      <created>1712604146456</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1712522335328</updated>
+      <updated>1712604146456</updated>
     </task>
     <servers />
   </component>
@@ -89,5 +76,16 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/my_base/MyGame.java</url>
+          <line>80</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
