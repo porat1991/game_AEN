@@ -21,7 +21,7 @@ public class MySpaceship {
         return image;
     }
 
-    private final String image = "resources/spaceShip.jpg";
+    private final String image = "resources/spaceShip1.jpg";
 
 
     public ScreenPoint getLocation() {
@@ -40,10 +40,9 @@ public class MySpaceship {
         return this.imageID;
     }
 
-
     public void addToCanvas() {
         GameCanvas canvas = Game.UI().canvas();
-        Image image = new Image(getImageID(), getImage(), 250,360, 200, 200);
+        Image image = new Image(getImageID(), getImage(), 250,360, 650, 500);
 //        image.setShapeListener(this);
 //        image.setzOrder(3);
         canvas.addShape(image);

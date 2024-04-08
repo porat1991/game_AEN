@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93f42932-b60b-4767-9bd6-6ae8f2646c19" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+    <list default="true" id="93f42932-b60b-4767-9bd6-6ae8f2646c19" name="Changes" comment="add configuration file">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/game_aen1/my_game/MySpaceship.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/game_aen1/my_game/MySpaceship.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/spaceShip.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/spaceShip.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/spacebackground.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/spacebackground.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_game/MySpaceship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_game/MySpaceship.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,9 +19,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2epani0U9s3GQJUpav9RHSbqKzJ" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -28,7 +30,7 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "Application.MyGame.executor": "Debug",
+    "Application.MyGame.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
@@ -64,6 +66,15 @@
       <option name="presentableId" value="Default" />
       <updated>1712604146456</updated>
     </task>
+    <task id="LOCAL‎-00001" summary="add configuration file">
+      <option name="closed" value="true" />
+      <created>1712605180891</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL‎-00001" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1712605180891</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -76,6 +87,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add configuration file" />
+    <option name="LAST_COMMIT_MESSAGE" value="add configuration file" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
