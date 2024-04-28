@@ -10,6 +10,9 @@ import base.PeriodicLoop;
 public class MyPeriodicLoop extends PeriodicLoop {
 
 	private MyContent content;
+	private int loopCounterTarget = 0;
+
+	private int limitLoopTarget = 8;
 
 	public void setContent(MyContent content) {
 		this.content = content;
@@ -19,7 +22,16 @@ public class MyPeriodicLoop extends PeriodicLoop {
 	public void execute() {
 		// Let the super class do its work first
 		super.execute();
-		redrawEnemyspaceship();
+		content.getTargetsManager().moveAllTargets();
+		if(loopCounterTarget == 0) {
+			content.getTargetsManager().addTarget();
+		}
+		loopCounterTarget++;
+		if(loopCounterTarget == limitLoopTarget) {
+			loopCounterTarget = 0;
+		}
+
+//		redrawEnemyspaceship();
 		
 		// You can comment this line if you don't want the pokimon to move.
 //		redrawPokimon();

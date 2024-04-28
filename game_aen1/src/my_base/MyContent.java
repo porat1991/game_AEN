@@ -3,9 +3,13 @@ package my_base;
 
 
 
-import my_game.EnemySpaceship;
+import my_game.Target;
 import my_game.MySpaceship;
 import base.GameContent;
+import my_game.TargetsManager;
+import ui_elements.ScreenPoint;
+
+import java.util.List;
 //import javafx.scene.effect.Light.Point;
 
 
@@ -16,12 +20,13 @@ public class MyContent extends GameContent{
 	//TODO
 	//Declare your own character
 	private MySpaceship mySpaceship;
-	private EnemySpaceship enemySpaceship1;
+
+	private final TargetsManager targetsManager = new TargetsManager();
 
 	@Override
 	public void initContent() {
-		this.mySpaceship = new MySpaceship();
-		this.enemySpaceship1 = new EnemySpaceship();
+		this.mySpaceship = new MySpaceship(new ScreenPoint(500, 650));
+//		this.target = new Target();
 
 //		pokimon = new Pokimon();
 //		pokimon.setLocation(new ScreenPoint(100,100));
@@ -48,14 +53,14 @@ public class MyContent extends GameContent{
 	public MySpaceship MySpaceship() {
 		return mySpaceship;
 	}
-	public EnemySpaceship enemySpaceship() {
-		return enemySpaceship1;
-	}
+//	public Target enemySpaceship() {
+//		return target;
+//	}
 
 //
 	public void addSpaceship() {
 		mySpaceship.addToCanvas();
-		enemySpaceship1.addToCanvas();
+//		target.addToCanvas();
 
 		//TODO
 		//Create an instance of your character and set its properties with
@@ -67,6 +72,12 @@ public class MyContent extends GameContent{
 
 	}
 
+	public TargetsManager getTargetsManager() {
+		return targetsManager;
+	}
+	//	public void setDirectionPolicy(Target.Direction direction) {
+//		directionPolicy = direction;
+//	}
 
 
 	//TODO

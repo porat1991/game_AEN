@@ -21,24 +21,18 @@ public class MyKeyboardListener extends KeyboardListener{
 	@Override
 	public void directionalKeyPressed(Direction direction) {
 		switch (direction) {
-		  case RIGHT:
-//			  myContent.pokimon().setDirectionPolicy(Pokimon.Direction.RIGHT);
-			  myContent.MySpaceship().setDirectionPolicy(MySpaceship.Direction.RIGHT);
-			  ((DirectionCombo) (Game.UI().dashboard().getUIElement("directionCombo"))).setDirection("Right");
-			  break;
-		  case LEFT:
-//			  myContent.pokimon().setDirectionPolicy(Pokimon.Direction.LEFT);
-			  myContent.MySpaceship().setDirectionPolicy(MySpaceship.Direction.LEFT);
-			  ((DirectionCombo) (Game.UI().dashboard().getUIElement("directionCombo"))).setDirection("Left");
-			  break;
-		  case UP:
-			  myContent.MySpaceship().setDirectionPolicy(MySpaceship.Direction.UP);
-//
-			  break;
-		  case DOWN:
-			  myContent.MySpaceship().setDirectionPolicy(MySpaceship.Direction.DOWN);
-//			  myContent.pokimon().setRotation(myContent.pokimon().getRotation() - 20);
-			  break;
+			case RIGHT:
+				myContent.MySpaceship().move(10, 0);
+				break;
+			case LEFT:
+				myContent.MySpaceship().move(-10, 0);
+				break;
+			case UP:
+				myContent.MySpaceship().move(0, -10);
+				break;
+			case DOWN:
+				myContent.MySpaceship().move(0, 10);
+				break;
 		}
 	}
 	

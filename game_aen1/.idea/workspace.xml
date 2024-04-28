@@ -4,11 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93f42932-b60b-4767-9bd6-6ae8f2646c19" name="Changes" comment="add configuration file">
+    <list default="true" id="93f42932-b60b-4767-9bd6-6ae8f2646c19" name="Changes" comment="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;game_aen1/.idea/workspace.xml&#10;#&#9;game_aen1/out/production/game_aen1/my_game/MySpaceship.class&#10;#&#9;game_aen1/src/my_game/MySpaceship.java">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/my_game/TargetsManager.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/game_aen1/my_base/MyContent.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/game_aen1/my_base/MyContent.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/game_aen1/my_base/MyKeyboardListener.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/game_aen1/my_base/MyKeyboardListener.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/game_aen1/my_base/MyPeriodicLoop.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/game_aen1/my_base/MyPeriodicLoop.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/game_aen1/my_game/EnemySpaceship$Direction.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/game_aen1/my_game/EnemySpaceship.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/game_aen1/my_game/MySpaceship$Direction.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/game_aen1/my_game/MySpaceship.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/game_aen1/my_game/MySpaceship.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/spaceShip.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/spaceShip.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/spacebackground.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/resources/spacebackground.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/spaceShip.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_base/MyContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_base/MyKeyboardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyKeyboardListener.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_base/MyPeriodicLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyPeriodicLoop.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_game/EnemySpaceship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_game/Target.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/my_game/MySpaceship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_game/MySpaceship.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -16,8 +27,30 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
+    <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "AviramAzran"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9cca6302-2daf-4962-84bf-59eed05a50fd" />
+        <option name="url" value="https://github.com/porat1991/game_AEN.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 8
@@ -33,6 +66,7 @@
     "Application.MyGame.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true"
   }
@@ -74,7 +108,23 @@
       <option name="project" value="LOCAL‎" />
       <updated>1712605180891</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL‎-00002" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;game_aen1/.idea/workspace.xml&#10;#&#9;game_aen1/out/production/game_aen1/my_game/MySpaceship.class&#10;#&#9;game_aen1/src/my_game/MySpaceship.java">
+      <option name="closed" value="true" />
+      <created>1713989341650</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL‎-00002" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1713989341650</updated>
+    </task>
+    <task id="LOCAL‎-00003" summary="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;game_aen1/.idea/workspace.xml&#10;#&#9;game_aen1/out/production/game_aen1/my_game/MySpaceship.class&#10;#&#9;game_aen1/src/my_game/MySpaceship.java">
+      <option name="closed" value="true" />
+      <created>1713989360297</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL‎-00003" />
+      <option name="project" value="LOCAL‎" />
+      <updated>1713989360298</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -90,15 +140,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="add configuration file" />
-    <option name="LAST_COMMIT_MESSAGE" value="add configuration file" />
+    <MESSAGE value="add configuration file&#10;change picture" />
+    <MESSAGE value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;game_aen1/.idea/workspace.xml&#10;#&#9;game_aen1/out/production/game_aen1/my_game/MySpaceship.class&#10;#&#9;game_aen1/src/my_game/MySpaceship.java" />
+    <option name="LAST_COMMIT_MESSAGE" value="Merge remote-tracking branch 'origin/main'&#10;&#10;# Conflicts:&#10;#&#9;game_aen1/.idea/workspace.xml&#10;#&#9;game_aen1/out/production/game_aen1/my_game/MySpaceship.class&#10;#&#9;game_aen1/src/my_game/MySpaceship.java" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/my_base/MyGame.java</url>
-          <line>80</line>
-          <option name="timeStamp" value="2" />
+          <url>file://$PROJECT_DIR$/src/my_game/Target.java</url>
+          <line>49</line>
+          <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
