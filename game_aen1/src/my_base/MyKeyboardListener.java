@@ -27,12 +27,12 @@ public class MyKeyboardListener extends KeyboardListener{
 			case LEFT:
 				myContent.MySpaceship().move(-10, 0);
 				break;
-			case UP:
-				myContent.MySpaceship().move(0, -10);
-				break;
-			case DOWN:
-				myContent.MySpaceship().move(0, 10);
-				break;
+			//case UP:
+				//myContent.MySpaceship().move(0, -10);
+				//break;
+			//case DOWN:
+				//myContent.MySpaceship().move(0, 10);
+				//break;
 		}
 	}
 	
