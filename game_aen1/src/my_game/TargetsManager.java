@@ -1,7 +1,6 @@
 package my_game;
 
 import base.Game;
-import org.apache.poi.ss.formula.functions.T;
 import ui_elements.ScreenPoint;
 
 import java.util.ArrayList;
@@ -45,5 +44,12 @@ public class TargetsManager {
         currentId++;
         target.addToCanvas();
         targets.add(target);
+    }
+
+    public void destroyTarget(Target target) {
+        System.out.println(target.getImageID() + " deleted");
+        Game.UI().canvas().getShape(target.getImageID());
+        target.removeFromCanvas(target.getImageID());
+        targets.remove(target);
     }
 }

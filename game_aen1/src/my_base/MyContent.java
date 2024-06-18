@@ -3,13 +3,8 @@ package my_base;
 
 
 
-import base.Game;
-import base.GameCanvas;
-import my_game.Target;
-import my_game.MySpaceship;
+import my_game.*;
 import base.GameContent;
-import my_game.TargetsManager;
-import shapes.Image;
 import ui_elements.ScreenPoint;
 
 import java.util.ArrayList;
@@ -23,16 +18,18 @@ public class MyContent extends GameContent{
 	//TODO
 	//Declare your own character
 	private MySpaceship mySpaceship;
+
+	private Weapon weapon;
 	private boolean isSpaceKeyPressed = false;
 
-	int offstX = 120;
-	int offstY = -750;
+
 
 	private final TargetsManager targetsManager = new TargetsManager();
 
 	@Override
 	public void initContent() {
 		this.mySpaceship = new MySpaceship(new ScreenPoint(833, 650));
+		this.weapon = new LaserWeapon();
 //		canvas.moveShapeToLocation(getImageID(), this.location.x, this.location.y);
 
 //		this.target = new Target();
@@ -69,18 +66,28 @@ public class MyContent extends GameContent{
 
 		if(isSpaceKeyPressed) {
 			ScreenPoint location = mySpaceship.getLocation();
-			showLazer(location);
-
+			weapon.showFire(location);
 			List<Target> gotHittedList = new ArrayList<>();
 			for (Target target : targetsManager.getTargets()) {
-				if(hitTarget(mySpaceship, target)) {
+				int laserXPosition =  mySpaceship.getLocation().x+weapon.getOffsetX();
 
+				if(hitTarget(laserXPosition, target.getLocation().x)) {
+					gotHittedList.add(target);
+					System.out.println("Hit target: " + target.getImageID());
+					System.out.println("laser x position: " + laserXPosition);
 				}
 			}
+			gotHittedList.forEach(target -> {
+				target.showExplosion();
+				targetsManager.destroyTarget(target);
+			});
 		}
 	}
-	private boolean hitTarget(MySpaceship mySpaceship, Target target) {
-		return true;
+	private boolean hitTarget(int laserXPosition, int targetLocationX) {
+		int halfWidth = 20;
+
+
+		return laserXPosition > targetLocationX-halfWidth && laserXPosition < targetLocationX+halfWidth;
 	}
 	
 	public void addSpaceship() {
@@ -100,37 +107,6 @@ public class MyContent extends GameContent{
 	public TargetsManager getTargetsManager() {
 		return targetsManager;
 	}
-	//	public void setDirectionPolicy(Target.Direction direction) {
-//		directionPolicy = direction;
-//	}
-
-	private void showLazer(ScreenPoint location) {
-
-
-
-		Image image = new Image(getLazerImageID(), getLazerImage(), 6,800, location.x, location.y);
-		GameCanvas canvas = Game.UI().canvas();
-		if(canvas.getShape(getLazerImageID()) == null) {
-			canvas.addShape(image);
-		}
-
-  		canvas.moveShapeToLocation(getLazerImageID(), location.x+offstX, location.y+offstY);
-		canvas.showShape(getLazerImageID());
-	}
-
-	public void hideLazer() {
-		GameCanvas canvas = Game.UI().canvas();
-		canvas.hideShape(getLazerImageID());
-	}
-
-
-		private String getLazerImage() {
-		 return "resources/Lazer.jpg";
-	}
-
-	private String getLazerImageID() {
-		 return "lazer";
-	}
 
 	public boolean isSpaceKeyPressed() {
 		return isSpaceKeyPressed;
@@ -141,7 +117,7 @@ public class MyContent extends GameContent{
 	}
 	public void setSpaceKeyReleased() {
 		isSpaceKeyPressed = false;
-		hideLazer();
+		weapon.hideFire();
 	}
 
 	//TODO
