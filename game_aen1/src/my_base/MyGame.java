@@ -79,7 +79,7 @@ public class MyGame extends Game {
 		game.setMouseHandler(new MyMouseHandler());
 		game.setKeyboardListener(new MyKeyboardListener());
 		game.initGame();
-		game.content.MySpaceship().move(-50,-50);
+		game.content.MySpaceship().move(-450,-200);
 
 	}
 
