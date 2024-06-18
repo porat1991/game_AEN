@@ -51,10 +51,39 @@ public class Target {
         canvas.addShape(image);
     }
 
+    public void removeFromCanvas(String id) {
+        GameCanvas canvas = Game.UI().canvas();
+        canvas.deleteShape(id);
+    }
+
     public void move(int dx, int dy) {
         setLocation(new ScreenPoint(this.location.x+dx, this.location.y+dy));
         GameCanvas canvas = Game.UI().canvas();
         canvas.moveShapeToLocation(getImageID(), this.location.x, this.location.y);
+    }
+
+    public void showExplosion() {
+        Image image = new Image(getExplosionImageID(), getExplosionImage(), 50,70, location.x, location.y);
+        GameCanvas canvas = Game.UI().canvas();
+        if(canvas.getShape(getExplosionImageID()) == null) {
+            canvas.addShape(image);
+        }
+
+        canvas.moveShapeToLocation(getExplosionImageID(), location.x, location.y);
+        canvas.showShape(getExplosionImageID());
+    }
+
+    private String getExplosionImageID() {
+        return "explosion";
+    }
+
+    private String getExplosionImage() {
+        return "resources/Explosion.jpg";
+    }
+
+    public void removeExplosion() {
+        GameCanvas canvas = Game.UI().canvas();
+        canvas.deleteShape(getExplosionImageID());
     }
 
 }
