@@ -63,8 +63,9 @@ public abstract class Game {
 	
 	protected void initContent() {
 		gameContent.initContent();
+
 	};
-	
+
 	protected void initDashboard() {
 		// Add end button to terminate game
 		gameUI.dashboard().addUIElement(new EndButton("btnEND", "END", 100, 60, 850, 50));

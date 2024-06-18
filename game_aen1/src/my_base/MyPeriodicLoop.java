@@ -22,6 +22,8 @@ public class MyPeriodicLoop extends PeriodicLoop {
 	public void execute() {
 		// Let the super class do its work first
 		super.execute();
+		content.fire();
+
 		content.getTargetsManager().moveAllTargets();
 		if(loopCounterTarget == 0) {
 			content.getTargetsManager().addTarget();

@@ -18,8 +18,14 @@ public class KeyboardListener {
 
 		@Override
 		public void keyReleased(KeyEvent e) {
-			// Auto-generated method stub
-
+			switch (e.getKeyCode()) {
+				case KeyEvent.VK_SPACE:
+					spaceKeyReleased();
+					break;
+				default:
+					// TODO: add more keys
+					break;
+			}
 		}
 
 		@Override
@@ -82,6 +88,9 @@ public class KeyboardListener {
 	// This function is a placeholder and should be overridden in derived specific
 	// buttons
 	public void spaceKeyPressed() {
+	}
+
+	public void spaceKeyReleased() {
 	}
 	
 	// This function is a placeholder and should be overridden in derived specific

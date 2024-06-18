@@ -8,10 +8,12 @@ import java.awt.event.KeyEvent;
 
 import base.Game;
 import base.KeyboardListener;
+import shapes.Shape;
 
 public class MyKeyboardListener extends KeyboardListener{
 
 	private MyContent myContent;
+	protected Shape draggedShape;
 	
 	public MyKeyboardListener() {
 		super();
@@ -27,12 +29,12 @@ public class MyKeyboardListener extends KeyboardListener{
 			case LEFT:
 				myContent.MySpaceship().move(-10, 0);
 				break;
-			case UP:
-				myContent.MySpaceship().move(0, -10);
-				break;
-			case DOWN:
-				myContent.MySpaceship().move(0, 10);
-				break;
+//			case UP:
+//				myContent.MySpaceship().move(0, -10);
+//				break;
+//			case DOWN:
+//				myContent.MySpaceship().move(0, 10);
+//				break;
 		}
 	}
 	
@@ -53,7 +55,13 @@ public class MyKeyboardListener extends KeyboardListener{
 	
 	@Override
 	public void spaceKeyPressed() {
+		myContent.setSpaceKeyPressed();
 		System.out.println("space key pressed.");
+	}
+
+	public void spaceKeyReleased() {
+		System.out.println("space key released.");
+		myContent.setSpaceKeyReleased();
 	}
 	
 	public void otherKeyPressed(KeyEvent e) {

@@ -65,9 +65,9 @@ public class MyGame extends Game {
 		// our game specific data
 		this.content = (MyContent) content;
 	}
-	
 	public MyContent getContent() {
 		return this.content;
+
 	}
 	
 	public static void main(String[] args) {
@@ -79,6 +79,7 @@ public class MyGame extends Game {
 		game.setMouseHandler(new MyMouseHandler());
 		game.setKeyboardListener(new MyKeyboardListener());
 		game.initGame();
+
 	}
 
 

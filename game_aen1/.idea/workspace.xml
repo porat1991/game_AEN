@@ -17,10 +17,9 @@
       <change beforePath="$PROJECT_DIR$/out/production/game_aen1/my_game/MySpaceship.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/game_aen1/my_game/MySpaceship.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/spaceShip.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/my_base/MyContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/my_base/MyGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/my_base/MyKeyboardListener.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyKeyboardListener.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/my_base/MyPeriodicLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyPeriodicLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_game/EnemySpaceship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_game/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_game/MySpaceship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_game/MySpaceship.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,12 +37,12 @@
     <option name="PUSH_AUTO_UPDATE" value="true" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "AviramAzran"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;AviramAzran&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -90,6 +89,13 @@
         <item itemvalue="Application.MyGame" />
       </list>
     </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-21.0.2-openjdk-21.0.2-4caba194b151-4f524021" />
+      </set>
+    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -151,6 +157,16 @@
           <url>file://$PROJECT_DIR$/src/my_game/Target.java</url>
           <line>49</line>
           <option name="timeStamp" value="13" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/my_base/MyContent.java</url>
+          <line>35</line>
+          <option name="timeStamp" value="17" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/my_base/MyContent.java</url>
+          <line>116</line>
+          <option name="timeStamp" value="40" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
