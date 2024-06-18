@@ -14,7 +14,7 @@ public class MyKeyboardListener extends KeyboardListener{
 
 	private MyContent myContent;
 	protected Shape draggedShape;
-	
+
 	public MyKeyboardListener() {
 		super();
 		myContent = (MyContent) this.content;
@@ -63,7 +63,7 @@ public class MyKeyboardListener extends KeyboardListener{
 		System.out.println("space key released.");
 		myContent.setSpaceKeyReleased();
 	}
-	
+
 	public void otherKeyPressed(KeyEvent e) {
 		System.out.println("other key pressed. type:" + e);
 	}
