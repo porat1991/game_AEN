@@ -1,4 +1,5 @@
 package my_base;
+
 // here efi is a monkey
 import java.awt.Color;
 
@@ -36,24 +37,24 @@ public class MyGame extends Game {
 		super.initDashboard();
 		GameDashboard dashboard = gameUI.dashboard();
 		
-		dashboard.setBackground(Color.BLACK);
+		dashboard.setBackground(Color.ORANGE);
 		
 		// Add a the Polygon buttons
-		dashboard.addUIElement(new EditPolygonButton("editButton", "Edit", 60, 40));
-		dashboard.addUIElement(new RotatePolygonButton("rotateButton", "Rotate", 60, 100));
+		// dashboard.addUIElement(new EditPolygonButton("editButton", "Edit", 60, 40));
+		// dashboard.addUIElement(new RotatePolygonButton("rotateButton", "Rotate", 60, 100));
 
 		// Add a the Circle drag checkbox
-		dashboard.addUIElement(new DragCircleCB("dragCB", "Drag Circle", 280, 80, 200, 40, false));
+		// dashboard.addUIElement(new DragCircleCB("dragCB", "Drag Circle", 280, 80, 200, 40, false));
 
-		// Add a the direction list combo
-		dashboard.addUIElement(new DirectionCombo(280, 40));
+		// // Add a the direction list combo
+		// dashboard.addUIElement(new DirectionCombo(280, 40));
 
-		// Add a the AddButton button
-		dashboard.addUIElement(new AddButton("addButton", "Add", 540, 40));
+		// // Add a the AddButton button
+		// dashboard.addUIElement(new AddButton("addButton", "Add", 540, 40));
 		
 		// Add the ChangeButton button to the dashboard
-		dashboard.addUIElement(new ChangeButton("changeButton", "Change", 540, 100));
-		dashboard.addUIElement(new MusicButton("musicButton", "Play", 700, 40));
+		// dashboard.addUIElement(new ChangeButton("changeButton", "Change", 540, 100));
+		//dashboard.addUIElement(new MusicButton("musicButton", "Play", 700, 40));
 
 	}
 	
@@ -67,8 +68,8 @@ public class MyGame extends Game {
 	}
 	public MyContent getContent() {
 		return this.content;
-
 	}
+
 	
 	public static void main(String[] args) {
 		MyGame game = new MyGame();

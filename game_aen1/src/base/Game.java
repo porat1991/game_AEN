@@ -68,7 +68,7 @@ public abstract class Game {
 
 	protected void initDashboard() {
 		// Add end button to terminate game
-		gameUI.dashboard().addUIElement(new EndButton("btnEND", "END", 100, 60, 850, 50));
+		gameUI.dashboard().addUIElement(new EndButton("btnEND", "RESTART", 200, 60, 400, 20));
 	}
 	
 	//You can refer to the game UI from anywhere by Game.UI()

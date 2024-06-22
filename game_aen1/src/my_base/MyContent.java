@@ -4,6 +4,7 @@ package my_base;
 
 
 import my_game.*;
+import base.GameCanvas;
 import base.GameContent;
 import ui_elements.ScreenPoint;
 
@@ -28,9 +29,9 @@ public class MyContent extends GameContent{
 
 	@Override
 	public void initContent() {
-		this.mySpaceship = new MySpaceship(new ScreenPoint(833, 650));
+		this.mySpaceship = new MySpaceship(new ScreenPoint(800, 600));
 		this.weapon = new LaserWeapon();
-//		canvas.moveShapeToLocation(getImageID(), this.location.x, this.location.y);
+		//GameCanvascanvas.moveShapeToLocation(getImageID(), this.location.x, this.location.y);
 
 //		this.target = new Target();
 
@@ -60,7 +61,7 @@ public class MyContent extends GameContent{
 		return mySpaceship;
 	}
 //
-
+	
 //
 	public void fire() {
 
@@ -69,6 +70,7 @@ public class MyContent extends GameContent{
 			weapon.showFire(location);
 			List<Target> gotHittedList = new ArrayList<>();
 			for (Target target : targetsManager.getTargets()) {
+				target.removeExplosion();
 				int laserXPosition =  mySpaceship.getLocation().x+weapon.getOffsetX();
 
 				if(hitTarget(laserXPosition, target.getLocation().x)) {
@@ -84,10 +86,10 @@ public class MyContent extends GameContent{
 		}
 	}
 	private boolean hitTarget(int laserXPosition, int targetLocationX) {
-		int halfWidth = 20;
+		int Width = 50;
 
 
-		return laserXPosition > targetLocationX-halfWidth && laserXPosition < targetLocationX+halfWidth;
+		return laserXPosition > targetLocationX && laserXPosition < targetLocationX+Width;
 	}
 	
 	public void addSpaceship() {

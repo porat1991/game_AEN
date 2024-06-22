@@ -28,7 +28,7 @@ public class GameUI {
 		 * Change this number for a different ratio between the canvas and the dashboard
 		 * -----------------------------------------------------------------------------
 		 */
-		split.setDividerLocation(height*78/100);
+		split.setDividerLocation(height*70/100);
 		
 		frame.getContentPane().add(split);
 	}

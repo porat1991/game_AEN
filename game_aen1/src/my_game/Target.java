@@ -63,7 +63,7 @@ public class Target {
     }
 
     public void showExplosion() {
-        Image image = new Image(getExplosionImageID(), getExplosionImage(), 70,70, location.x, location.y);
+        Image image = new Image(getExplosionImageID(), getExplosionImage(), 70,90, location.x, location.y);
         GameCanvas canvas = Game.UI().canvas();
         if(canvas.getShape(getExplosionImageID()) == null) {
             canvas.addShape(image);

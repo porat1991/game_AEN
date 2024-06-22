@@ -11,7 +11,7 @@ public class LaserWeapon implements Weapon{
     private final int offstY = -750;
     @Override
     public void showFire(ScreenPoint location) {
-        Image image = new Image(getLaserImageID(), getLaserImage(), 6,800, location.x, location.y);
+        Image image = new Image(getLaserImageID(), getLaserImage(), 5 ,800, location.x, location.y);
         GameCanvas canvas = Game.UI().canvas();
         if(canvas.getShape(getLaserImageID()) == null) {
             canvas.addShape(image);

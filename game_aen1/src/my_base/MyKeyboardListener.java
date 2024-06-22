@@ -24,9 +24,11 @@ public class MyKeyboardListener extends KeyboardListener{
 	public void directionalKeyPressed(Direction direction) {
 		switch (direction) {
 			case RIGHT:
+				System.out.println("direction key pressed - RIGHT.");
 				myContent.MySpaceship().move(10, 0);
 				break;
 			case LEFT:
+				System.out.println("direction key pressed - LEFT.");
 				myContent.MySpaceship().move(-10, 0);
 				break;
 //			case UP:
@@ -67,4 +69,5 @@ public class MyKeyboardListener extends KeyboardListener{
 	public void otherKeyPressed(KeyEvent e) {
 		System.out.println("other key pressed. type:" + e);
 	}
+	
 }
