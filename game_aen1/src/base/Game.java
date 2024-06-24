@@ -1,7 +1,11 @@
 package base;
 
 import DB.ExcelDB;
+import my_base.MyContent;
+import my_game.GameManager;
 import my_ui_elements.EndButton;
+import my_ui_elements.LowLevelButton;
+import ui_elements.GameButton;
 
 public abstract class Game {
 	protected static GameContent gameContent;
@@ -67,8 +71,14 @@ public abstract class Game {
 	};
 
 	protected void initDashboard() {
-		// Add end button to terminate game
-		gameUI.dashboard().addUIElement(new EndButton("btnEND", "RESTART", 200, 60, 400, 20));
+		GameManager gameManager = ((MyContent)gameContent).getGameManager();
+		EndButton endButton = new EndButton("btnEND", "END", 200, 60, 400, 20);
+		endButton.setGameManager(gameManager);
+		LowLevelButton lowLevelButton = new LowLevelButton("btnLOW", "LOW", 200, 60, 400, 100);
+		lowLevelButton.setGameManager(gameManager);
+
+		gameUI.dashboard().addUIElement(endButton);
+		gameUI.dashboard().addUIElement(lowLevelButton);
 	}
 	
 	//You can refer to the game UI from anywhere by Game.UI()

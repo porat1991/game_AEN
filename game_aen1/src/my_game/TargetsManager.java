@@ -27,9 +27,10 @@ public class TargetsManager {
         this.targets = targets;
     }
 
-    public void moveAllTargets() {
+    public void moveAllTargets(int level) {
+        int stepSize = getStepSize(level);
         for (Target target : this.targets) {
-            target.move(0, 5);
+            target.move(0, stepSize);
         }
     }
 
@@ -46,7 +47,25 @@ public class TargetsManager {
         targets.add(target);
     }
 
-    public void destroyTarget(Target target) {
+    public int getStepSize(int level) {
+        return switch (level) {
+            case 1 -> 5;
+            case 2 -> 7;
+            case 3 -> 9;
+            default -> 5;
+        };
+    }
+
+    public void removeAllTargets() {
+        int size = targets.size();
+        List<Target> targetsCopy = new ArrayList<>(this.targets);
+        for(int i = 0; i < size; i++) {
+            removeTarget(targetsCopy.get(i));
+        }
+
+    }
+
+    public void removeTarget(Target target) {
         System.out.println(target.getImageID() + " deleted");
         Game.UI().canvas().getShape(target.getImageID());
         target.removeFromCanvas(target.getImageID());

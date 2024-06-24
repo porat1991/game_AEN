@@ -3,9 +3,8 @@ package my_base;
 
 
 
+import base.*;
 import my_game.*;
-import base.GameCanvas;
-import base.GameContent;
 import ui_elements.ScreenPoint;
 
 import java.util.ArrayList;
@@ -23,14 +22,13 @@ public class MyContent extends GameContent{
 	private Weapon weapon;
 	private boolean isSpaceKeyPressed = false;
 
-
-
-	private final TargetsManager targetsManager = new TargetsManager();
+	private GameManager gameManager;
 
 	@Override
 	public void initContent() {
 		this.mySpaceship = new MySpaceship(new ScreenPoint(800, 600));
 		this.weapon = new LaserWeapon();
+		this.gameManager = new GameManager();
 		//GameCanvascanvas.moveShapeToLocation(getImageID(), this.location.x, this.location.y);
 
 //		this.target = new Target();
@@ -69,11 +67,12 @@ public class MyContent extends GameContent{
 			ScreenPoint location = mySpaceship.getLocation();
 			weapon.showFire(location);
 			List<Target> gotHittedList = new ArrayList<>();
-			for (Target target : targetsManager.getTargets()) {
+			for (Target target : gameManager.getTargetsManager().getTargets()) {
 				target.removeExplosion();
 				int laserXPosition =  mySpaceship.getLocation().x+weapon.getOffsetX();
 
 				if(hitTarget(laserXPosition, target.getLocation().x)) {
+					gameManager.decreaseScore(1);
 					gotHittedList.add(target);
 					System.out.println("Hit target: " + target.getImageID());
 					System.out.println("laser x position: " + laserXPosition);
@@ -81,7 +80,7 @@ public class MyContent extends GameContent{
 			}
 			gotHittedList.forEach(target -> {
 				target.showExplosion();
-				targetsManager.destroyTarget(target);
+				gameManager.getTargetsManager().removeTarget(target);
 			});
 		}
 	}
@@ -106,9 +105,7 @@ public class MyContent extends GameContent{
 
 	}
 
-	public TargetsManager getTargetsManager() {
-		return targetsManager;
-	}
+
 
 	public boolean isSpaceKeyPressed() {
 		return isSpaceKeyPressed;
@@ -121,6 +118,28 @@ public class MyContent extends GameContent{
 		isSpaceKeyPressed = false;
 		weapon.hideFire();
 	}
+
+	public GameManager getGameManager() {
+		return gameManager;
+	}
+
+
+	public boolean isSpaceshipHit(Target target) {
+//		ScreenPoint spaceshipLocation = MySpaceship().getLocation();
+//		int spaceshipMaxY = spaceshipLocation.y - MySpaceship().getHeight();
+//		int spaceshipMaxX = spaceshipLocation.x + MySpaceship().getWidth();
+//		int spaceshipMinX = spaceshipLocation.x;
+//
+//		int targetMaxY = target.getLocation().y;
+//		int targetMinX = target.getLocation().x;
+//		int targetMaxX = target.getLocation().x + target.getWidth();
+//
+//		if(spaceshipMaxY < targetMaxY) {
+//			return spaceshipMaxX > targetMinX && targetMaxX > spaceshipMinX;
+//		}
+		return false;
+	}
+
 
 	//TODO
 	//create a method with the name myCharacter which returns

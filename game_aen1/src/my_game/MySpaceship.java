@@ -6,6 +6,8 @@ import shapes.Image;
 import ui_elements.ScreenPoint;
 
 public class MySpaceship {
+    private final int width = 250;
+    private final int height = 360;
 
     public MySpaceship(ScreenPoint initPosition) {
         this.imageID = "spaceship";
@@ -48,13 +50,21 @@ public class MySpaceship {
         return location;
     }
 
+    public int getWidth() {
+    	return width;
+    }
+
+    public int getHeight() {
+    	return height;
+    }
+
     public void setLocation(ScreenPoint location) {
         this.location = location;
     }
 
     public void addToCanvas() {
         GameCanvas canvas = Game.UI().canvas();
-        Image image = new Image(getImageID(), getImage(), 250,360, this.location.x, this.location.y);
+        Image image = new Image(getImageID(), getImage(), width,height, this.location.x, this.location.y);
         System.out.println("x: " + this.location.x);
         System.out.println("y: " + this.location.y);
         System.out.println("x: " + image.getPosX());

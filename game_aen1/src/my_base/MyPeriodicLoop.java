@@ -1,11 +1,8 @@
 package my_base;
 
 
-
-
-import base.Game;
-import base.GameCanvas;
 import base.PeriodicLoop;
+
 
 public class MyPeriodicLoop extends PeriodicLoop {
 
@@ -24,60 +21,28 @@ public class MyPeriodicLoop extends PeriodicLoop {
 		super.execute();
 		content.fire();
 
-		content.getTargetsManager().moveAllTargets();
+		content.getGameManager().getTargetsManager().moveAllTargets(content.getGameManager().getLevel());
 		if(loopCounterTarget == 0) {
-			content.getTargetsManager().addTarget();
+			content.getGameManager().getTargetsManager().addTarget();
 		}
 		loopCounterTarget++;
 		if(loopCounterTarget == limitLoopTarget) {
 			loopCounterTarget = 0;
 		}
+		content.getGameManager().getTargetsManager().getTargets().forEach(target -> {
+			if(target.getLocation().y > 800) {
+				content.getGameManager().getTargetsManager().removeTarget(target);
+			}
+			if(content.isSpaceshipHit(target)) {
+				System.out.println("spaceship hit " + target.getImageID());
+				content.getGameManager().getTargetsManager().removeTarget(target);
+				content.getGameManager().decreaseLife();
+				if(content.getGameManager().getLives() == 0) {
+					content.getGameManager().gameOver();
+				}
+			}
+		});
 
-//		redrawEnemyspaceship();
-		
-		// You can comment this line if you don't want the pokimon to move.
-//		redrawPokimon();
-		
-		//TODO
-		//Redraw your character periodically by calling the correct method
-		
-	}
-	
-//	private void redrawPokimon() {
-//		content.pokimon().move();
-//	}
-
-//	private void redrawCharacter() {
-//
-//		GameCanvas canvas = Game.UI().canvas();
-//
-//		//TODO
-//		//Remove the comment from the next line so you can easily
-//		//access your character
-//
-//		//MyCharacter character = content.myCharacter();
-//
-//		//Since this function is called every interval, it will also be called
-//		//before the character is created. Therefore, we check if the character
-//		//exists and if not, we return without doing anything.
-//
-//		//TODO: Remove comments from next 2 lines
-////		if (character == null)
-////			return;
-//
-//		//TODO
-//		//Call the canvas to change the shape properties according to
-//		//its current property values
-//		//You can get the shape using canvas.getShape(id) with the id of your character
-//		//Then you can cast it so you can refer to its specific properties.
-//		//For example, if your shape is a Circle you can use:
-//		//Circle circle = (Circle) canvas.getShape(id)
-//		//and then change the specific Circle properties.
-//
-//	}
-	private void redrawEnemyspaceship() {
-
-		GameCanvas canvas = Game.UI().canvas();
 	}
 
 }

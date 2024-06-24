@@ -7,7 +7,8 @@ import ui_elements.ScreenPoint;
 
 public class Target {
 
-
+        private int width = 50;
+        private int height = 70;
         private String imageID;
         private String image;
         private ScreenPoint location;
@@ -21,6 +22,14 @@ public class Target {
         this.imageID = imageId;
         this.image = imagePath;
         this.location = initPosition;
+    }
+
+    public int getWidth() {
+    	return width;
+    }
+
+    public int getHeight() {
+    	return height;
     }
 
     public String getImageID() {
@@ -45,7 +54,7 @@ public class Target {
 
     public void addToCanvas() {
         GameCanvas canvas = Game.UI().canvas();
-        Image image = new Image(getImageID(), getImage(), 50,70, this.location.x, this.location.y);
+        Image image = new Image(getImageID(), getImage(), width, height, this.location.x, this.location.y);
 //        image.setShapeListener(this);
 //        image.setzOrder(3);
         canvas.addShape(image);

@@ -1,21 +1,12 @@
 package my_base;
 
-// here efi is a monkey
 import java.awt.Color;
 
 import base.Game;
 import base.GameCanvas;
 import base.GameContent;
 import base.GameDashboard;
-import my_game.Pokimon;
-import my_ui_elements.AddButton;
-import my_ui_elements.ChangeButton;
-import my_ui_elements.DirectionCombo;
-import my_ui_elements.DragCircleCB;
-import my_ui_elements.EditPolygonButton;
-import my_ui_elements.MusicButton;
-import my_ui_elements.RotatePolygonButton;
-import shapes.Circle;
+
 
 public class MyGame extends Game {
 	
@@ -38,23 +29,7 @@ public class MyGame extends Game {
 		GameDashboard dashboard = gameUI.dashboard();
 		
 		dashboard.setBackground(Color.ORANGE);
-		
-		// Add a the Polygon buttons
-		// dashboard.addUIElement(new EditPolygonButton("editButton", "Edit", 60, 40));
-		// dashboard.addUIElement(new RotatePolygonButton("rotateButton", "Rotate", 60, 100));
 
-		// Add a the Circle drag checkbox
-		// dashboard.addUIElement(new DragCircleCB("dragCB", "Drag Circle", 280, 80, 200, 40, false));
-
-		// // Add a the direction list combo
-		// dashboard.addUIElement(new DirectionCombo(280, 40));
-
-		// // Add a the AddButton button
-		// dashboard.addUIElement(new AddButton("addButton", "Add", 540, 40));
-		
-		// Add the ChangeButton button to the dashboard
-		// dashboard.addUIElement(new ChangeButton("changeButton", "Change", 540, 100));
-		//dashboard.addUIElement(new MusicButton("musicButton", "Play", 700, 40));
 
 	}
 	
