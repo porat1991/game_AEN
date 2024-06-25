@@ -1,5 +1,9 @@
 package my_game;
 
+import base.Game;
+import base.GameCanvas;
+import my_ui_elements.LivesButton;
+import my_ui_elements.ScoreButton;
 import shapes.Image;
 
 public class GameManager {
@@ -14,6 +18,7 @@ public class GameManager {
 
     public void decreaseLife() {
         lives--;
+        livesChanged();
     }
 
     public GameManager() {
@@ -38,20 +43,13 @@ public class GameManager {
         return lives;
     }
 
-    public void setLives(int lives) {
-        this.lives = lives;
-    }
-
     public int getLevel() {
         return level;
     }
 
-    public void setLevel(int level) {
-        this.level = level;
-    }
-
     public void decreaseScore (int score) {
         this.score -= score;
+        scoreChanged();
     }
 
     public void setLowLevel () {
@@ -69,15 +67,31 @@ public class GameManager {
         this.score = 30;
         this.lives = 3;
         targetsManager.removeAllTargets();
+        scoreChanged();
+        livesChanged();
     }
 
     public void gameOver() {
 
         System.out.println("Game Over");
+        targetsManager.removeAllTargets();
+        showGameOverImage();
+        Game.endGame();
+    }
 
+    private void showGameOverImage() {
         String imageID = "gameOver";
-        String imagePath = "resources/spaceShip1.jpg";
-        Image image = new Image(imageID, imagePath, 300,100, 400, 400);
+        String imagePath = "resources/game-over.jpg";
+        Image image = new Image(imageID, imagePath, 1800, 800, 1000, 400);
+        GameCanvas canvas = Game.UI().canvas();
+        canvas.addShape(image);
 
+    }
+
+    private void scoreChanged() {
+        ((ScoreButton)Game.UI().dashboard().getUIElement("btnScore")).setText(this.score);
+    }
+    private void livesChanged() {
+        ((LivesButton)Game.UI().dashboard().getUIElement("btnLives")).setText(this.lives);
     }
 }

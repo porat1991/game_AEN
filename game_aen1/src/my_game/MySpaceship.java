@@ -64,7 +64,7 @@ public class MySpaceship {
 
     public void addToCanvas() {
         GameCanvas canvas = Game.UI().canvas();
-        Image image = new Image(getImageID(), getImage(), width,height, this.location.x, this.location.y);
+        Image image = new Image(getImageID(), getImage(), width, height, this.location.x, this.location.y);
         System.out.println("x: " + this.location.x);
         System.out.println("y: " + this.location.y);
         System.out.println("x: " + image.getPosX());

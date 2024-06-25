@@ -11,4 +11,10 @@ public interface Weapon {
     int getOffsetX();
 
     int getOffsetY();
+
+    public void decreaseStack();
+
+    public void increaseStack();
+
+    public int getStack();
 }

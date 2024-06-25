@@ -4,7 +4,7 @@ package my_ui_elements;
 import my_game.GameManager;
 import ui_elements.GameButton;
 
-public class EndButton extends GameButton {
+public class RestartButton extends GameButton {
 
 	GameManager gameManager;
 
@@ -12,7 +12,7 @@ public class EndButton extends GameButton {
 		this.gameManager = gameManager;
 	}
 
-	public EndButton(String id, String name, int width, int height, int posX, int posY) {
+	public RestartButton(String id, String name, int width, int height, int posX, int posY) {
 		super(id, name, width, height, posX, posY);
 	}
 

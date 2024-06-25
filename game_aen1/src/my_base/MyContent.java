@@ -27,34 +27,11 @@ public class MyContent extends GameContent{
 	@Override
 	public void initContent() {
 		this.mySpaceship = new MySpaceship(new ScreenPoint(800, 600));
-		this.weapon = new LaserWeapon();
+		this.weapon = new LaserWeapon(7);
 		this.gameManager = new GameManager();
-		//GameCanvascanvas.moveShapeToLocation(getImageID(), this.location.x, this.location.y);
 
-//		this.target = new Target();
+	}
 
-//		pokimon = new Pokimon();
-//		pokimon.setLocation(new ScreenPoint(100,100));
-//		ScreenPoint[] points = {
-//			new ScreenPoint(100, 100),
-//			new ScreenPoint(130, 50),
-//			new ScreenPoint(170, 50),
-//			new ScreenPoint(200, 100),
-//			new ScreenPoint(220, 170),
-//			new ScreenPoint(170, 150),
-//			new ScreenPoint(130, 150)
-//		};
-//
-//		myPolygon = new MyPolygon(points);
-	}	
-
-//	public Pokimon pokimon() {
-//		return pokimon;
-//	}
-//
-//	public MyPolygon polygon() {
-//		return myPolygon;
-//	}
 	public MySpaceship MySpaceship() {
 		return mySpaceship;
 	}
@@ -62,8 +39,13 @@ public class MyContent extends GameContent{
 	
 //
 	public void fire() {
-
 		if(isSpaceKeyPressed) {
+  			if(weapon.getStack() == 0) {
+				  weapon.hideFire();
+				  return;
+			}
+			weapon.decreaseStack();
+
 			ScreenPoint location = mySpaceship.getLocation();
 			weapon.showFire(location);
 			List<Target> gotHittedList = new ArrayList<>();
@@ -82,6 +64,8 @@ public class MyContent extends GameContent{
 				target.showExplosion();
 				gameManager.getTargetsManager().removeTarget(target);
 			});
+		} else {
+			weapon.increaseStack();
 		}
 	}
 	private boolean hitTarget(int laserXPosition, int targetLocationX) {
@@ -105,6 +89,10 @@ public class MyContent extends GameContent{
 
 	}
 
+	public Weapon getWeapon() {
+		return weapon;
+	}
+
 
 
 	public boolean isSpaceKeyPressed() {
@@ -125,18 +113,22 @@ public class MyContent extends GameContent{
 
 
 	public boolean isSpaceshipHit(Target target) {
-//		ScreenPoint spaceshipLocation = MySpaceship().getLocation();
-//		int spaceshipMaxY = spaceshipLocation.y - MySpaceship().getHeight();
-//		int spaceshipMaxX = spaceshipLocation.x + MySpaceship().getWidth();
-//		int spaceshipMinX = spaceshipLocation.x;
-//
-//		int targetMaxY = target.getLocation().y;
-//		int targetMinX = target.getLocation().x;
-//		int targetMaxX = target.getLocation().x + target.getWidth();
-//
-//		if(spaceshipMaxY < targetMaxY) {
-//			return spaceshipMaxX > targetMinX && targetMaxX > spaceshipMinX;
-//		}
+		ScreenPoint spaceshipLocation = MySpaceship().getLocation();
+		int spaceshipMaxY = spaceshipLocation.y;
+		int spaceshipMaxX = spaceshipLocation.x + MySpaceship().getWidth()/2;
+		int spaceshipMinX = spaceshipLocation.x;
+
+		int targetMaxY = target.getLocation().y;
+		int targetMinX = target.getLocation().x;
+		int targetMaxX = target.getLocation().x + target.getWidth()/2;
+
+		if(spaceshipMaxY < targetMaxY) {
+			if (spaceshipMaxX > targetMinX && targetMaxX > spaceshipMinX) {
+				System.out.println("spaceship hit: " + "target min X:" + targetMinX + " " + "target max X:" + targetMaxX + "target max Y:" + targetMaxY
+						+ " " + "spaceship min X:" + spaceshipMinX + " " + "spaceship max X:" + spaceshipMaxX + "spaceship max Y:" + spaceshipMaxY);
+				return true;
+			}
+		}
 		return false;
 	}
 

@@ -50,8 +50,8 @@ public class TargetsManager {
     public int getStepSize(int level) {
         return switch (level) {
             case 1 -> 5;
-            case 2 -> 7;
-            case 3 -> 9;
+            case 2 -> 10;
+            case 3 -> 15;
             default -> 5;
         };
     }

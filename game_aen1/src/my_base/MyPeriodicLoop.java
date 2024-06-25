@@ -2,6 +2,9 @@ package my_base;
 
 
 import base.PeriodicLoop;
+import my_game.Target;
+
+import java.util.List;
 
 
 public class MyPeriodicLoop extends PeriodicLoop {
@@ -29,7 +32,8 @@ public class MyPeriodicLoop extends PeriodicLoop {
 		if(loopCounterTarget == limitLoopTarget) {
 			loopCounterTarget = 0;
 		}
-		content.getGameManager().getTargetsManager().getTargets().forEach(target -> {
+		List<Target> targetsCopy = new java.util.ArrayList<>(content.getGameManager().getTargetsManager().getTargets());
+		targetsCopy.forEach(target -> {
 			if(target.getLocation().y > 800) {
 				content.getGameManager().getTargetsManager().removeTarget(target);
 			}

@@ -3,9 +3,8 @@ package base;
 import DB.ExcelDB;
 import my_base.MyContent;
 import my_game.GameManager;
-import my_ui_elements.EndButton;
-import my_ui_elements.LowLevelButton;
-import ui_elements.GameButton;
+import my_game.Weapon;
+import my_ui_elements.*;
 
 public abstract class Game {
 	protected static GameContent gameContent;
@@ -72,13 +71,28 @@ public abstract class Game {
 
 	protected void initDashboard() {
 		GameManager gameManager = ((MyContent)gameContent).getGameManager();
-		EndButton endButton = new EndButton("btnEND", "END", 200, 60, 400, 20);
-		endButton.setGameManager(gameManager);
-		LowLevelButton lowLevelButton = new LowLevelButton("btnLOW", "LOW", 200, 60, 400, 100);
-		lowLevelButton.setGameManager(gameManager);
 
+		RestartButton endButton = new RestartButton("btnRestart", "RESTART", 200, 60, 400, 20);
+		endButton.setGameManager(gameManager);
 		gameUI.dashboard().addUIElement(endButton);
-		gameUI.dashboard().addUIElement(lowLevelButton);
+
+		ComboBoxLevel comboBoxLevel = new ComboBoxLevel("comboBoxLevel", "LEVEL", 200, 60, 400, 100, gameManager);
+		gameUI.dashboard().addUIElement(comboBoxLevel);
+
+
+		ScoreButton scoreButton = new ScoreButton("btnScore", "Score: " + Integer.toString(gameManager.getScore()), 200, 60, 400, 180, gameManager);
+		gameUI.dashboard().addUIElement(scoreButton);
+
+		Weapon weapon = ((MyContent) gameContent).getWeapon();
+		StackCapacity stackCapacity = new StackCapacity("btnStack", Integer.toString(weapon.getStack()), 200, 60, 400, 260, weapon);
+		gameUI.dashboard().addUIElement(stackCapacity);
+
+		LivesButton livesButton = new LivesButton("btnLives", "Lives: " + Integer.toString(gameManager.getLives()), 200, 60, 400, 340, gameManager);
+		gameUI.dashboard().addUIElement(livesButton);
+
+
+
+
 	}
 	
 	//You can refer to the game UI from anywhere by Game.UI()

@@ -4,19 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="93f42932-b60b-4767-9bd6-6ae8f2646c19" name="Changes" comment="1. 18.06">
-      <change afterPath="$PROJECT_DIR$/src/my_game/GameManager.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/my_ui_elements/LowLevelButton.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/base/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/base/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_base/MyContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyContent.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_base/MyGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_base/MyPeriodicLoop.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_base/MyPeriodicLoop.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_game/MySpaceship.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_game/MySpaceship.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_game/Target.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_game/Target.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_game/TargetsManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_game/TargetsManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/my_ui_elements/EndButton.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/my_ui_elements/EndButton.java" afterDir="false" />
-    </list>
+    <list default="true" id="93f42932-b60b-4767-9bd6-6ae8f2646c19" name="Changes" comment="1. 18.06" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,13 +75,6 @@
         <item itemvalue="Application.MyGame" />
       </list>
     </recent_temporary>
-  </component>
-  <component name="SharedIndexes">
-    <attachedChunks>
-      <set>
-        <option value="jdk-21.0.1-openjdk-21.0.1-4caba194b151-23eed401" />
-      </set>
-    </attachedChunks>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
