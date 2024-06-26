@@ -72,22 +72,22 @@ public abstract class Game {
 	protected void initDashboard() {
 		GameManager gameManager = ((MyContent)gameContent).getGameManager();
 
-		RestartButton endButton = new RestartButton("btnRestart", "RESTART", 200, 60, 400, 20);
+		RestartButton endButton = new RestartButton("btnRestart", "RESTART", 120, 50, 400, 20);
 		endButton.setGameManager(gameManager);
 		gameUI.dashboard().addUIElement(endButton);
 
-		ComboBoxLevel comboBoxLevel = new ComboBoxLevel("comboBoxLevel", "LEVEL", 200, 60, 400, 100, gameManager);
+		ComboBoxLevel comboBoxLevel = new ComboBoxLevel("comboBoxLevel", "LEVEL", 30, 50, 250, 20, gameManager);
 		gameUI.dashboard().addUIElement(comboBoxLevel);
 
 
-		ScoreButton scoreButton = new ScoreButton("btnScore", "Score: " + Integer.toString(gameManager.getScore()), 200, 60, 400, 180, gameManager);
+		ScoreButton scoreButton = new ScoreButton("btnScore", "Score: " + Integer.toString(gameManager.getScore()), 120, 50, 550, 20, gameManager);
 		gameUI.dashboard().addUIElement(scoreButton);
 
 		Weapon weapon = ((MyContent) gameContent).getWeapon();
-		StackCapacity stackCapacity = new StackCapacity("btnStack", Integer.toString(weapon.getStack()), 200, 60, 400, 260, weapon);
+		StackCapacity stackCapacity = new StackCapacity("btnStack", Integer.toString(weapon.getStack()), 50, 50, 700, 20, weapon);
 		gameUI.dashboard().addUIElement(stackCapacity);
 
-		LivesButton livesButton = new LivesButton("btnLives", "Lives: " + Integer.toString(gameManager.getLives()), 200, 60, 400, 340, gameManager);
+		LivesButton livesButton = new LivesButton("btnLives", "Lives: " + Integer.toString(gameManager.getLives()), 120, 50, 850, 20, gameManager);
 		gameUI.dashboard().addUIElement(livesButton);
 
 
